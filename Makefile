@@ -8,19 +8,18 @@ SRC = src/main.rs
 DESTDIR = /usr/local/bin
 
 # Compiler
-CC = rustc
-
-# Compiler flags
-CFLAGS = --release
+CC = cargo
 
 all: $(PROG)
 
 $(PROG): $(SRC)
-	$(CC) $(CFLAGS) $< -o $@
+	$(CC) build --release
 
 install: $(PROG)
-	cp $(PROG) $(DESTDIR)
+	cp target/release/$(PROG) $(DESTDIR)
 
 clean:
-	rm -f $(PROG)
+	rm -f target/release/$(PROG)
 
+uninstall:
+	rm /usr/local/bin/$(PROG)
