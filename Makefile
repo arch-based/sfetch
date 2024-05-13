@@ -1,25 +1,19 @@
-# Name of your program
-PROG = sfetch
+# sfetch - suckless fetching utility
 
-# Path to your source file
-SRC = src/main.rs
+.POSIX:
 
-# Destination directory for the binary
-DESTDIR = /usr/local/bin
+include config.mk
 
-# Compiler
-CC = cargo
-
-all: $(PROG)
-
-$(PROG): $(SRC)
+all: sfetch
+	
+sfetch: $(SRC)
 	$(CC) build --release
 
-install: $(PROG)
-	cp target/release/$(PROG) $(DESTDIR)
+install: sfetch
+	cp $(TARGETDIR)/sfetch $(DESTDIR)
 
 clean:
-	rm -f target/release/$(PROG)
+	rm -rf $(TARGETDIR)/sfetch
 
 uninstall:
-	rm /usr/local/bin/$(PROG)
+	rm $(DESTDIR)/sfetch
