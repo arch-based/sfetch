@@ -1,0 +1,28 @@
+sfetch - suckless fetching utility
+--------------------
+sfetch is a simple fetching utility that suck less compared to fastfetch and 
+
+Requirements
+------------
+In order to build suckless fetch or sfetch, make sure to install rust or rustup and run rustup default stable to avoid any errors.
+
+
+Installation
+------------
+Edit config.mk to match your local setup (sfetch is installed into
+the /usr/local namespace by default).
+
+Afterwards enter the following command to build and install st (if
+necessary as root):
+
+    make clean install
+
+
+Running st
+----------
+Use /usr/local/bin/sfetch or use the $PATH variable: sfetch.
+
+Credits
+-------
+Based on anonyneon's / arch-based on github's <anonyneon4@gmail.com> fetcher-rs source code just suck less.
+
