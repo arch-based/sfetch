@@ -28,3 +28,7 @@ $ sfetch
 ## Contributing
 
 You may contribute to `sfetch` by building, and making pull requests or opening an issue.
+
+## License
+
+`sfetch` is an open source software licensed under GNU General Public License version 3.0 (GPLv3.0)
