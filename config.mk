@@ -1,7 +1,7 @@
 # Feel free to add anything.
 
-# Path to the source file of the building environment.
-SRC = ./main.c
+# Path to the source file.
+SRC = ./src/main.c
 
 # Destination parent where the compiled binary will go to.
 DESTDIR = /usr/local/bin
