@@ -1,13 +1,13 @@
 # Feel free to add anything.
 
 # Path to the source file of the building environment.
-SRC = src/main.rs
+SRC = ./main.c
 
 # Destination parent where the compiled binary will go to.
 DESTDIR = /usr/local/bin
 
 # Compiler 
-CC = cargo
+CC = gcc
 
-# The result directory after cargo built and compiled the binary.
-TARGETDIR = target/release
+# Binary after gcc compiled the new program.
+TARGETBIN = ./sfetch

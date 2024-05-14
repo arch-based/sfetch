@@ -5,15 +5,18 @@
 include config.mk
 
 all: sfetch
-	
-sfetch: $(SRC)
-	$(CC) build --release
 
+config.h:
+	cp config.def.h config.h
+
+sfetch: $(SRC)
+	$(CC) main.c -o sfetch
+	
 install: sfetch
-	cp $(TARGETDIR)/sfetch $(DESTDIR)
+	cp $(TARGETBIN) $(DESTDIR)
 
 clean:
-	rm -rf $(TARGETDIR)/sfetch
+	rm -rf $(TARGETBIN)
 
 uninstall:
 	rm $(DESTDIR)/sfetch

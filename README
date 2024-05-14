@@ -1,6 +1,6 @@
 sfetch - suckless fetching utility
 --------------------
-sfetch is a simple fetching utility that suck less compared to fastfetch and neofetch. It uses rust as a programming language in order to be safe from buffer overflows and any vulnerability, it also is universal because it can be compiled any where, unlike fetcher, which can not.
+sfetch is a simple fetching utility that suck less compared to fastfetch and neofetch. It uses rust as a programming language in order to be safe from buffer overflows and any vulnerability, it also is universal because it can be compiled any where, unlike fetcher, which can not. This project will be moved to C. Since it is the real suckless programming language.
 
 Requirements
 ------------
