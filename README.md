@@ -1,39 +1,30 @@
-sfetch
--------------
-The **s***uckless* **fetch***ing utility*, abbreviated as sfetch is a suckless utility that aims to beat neofetch and its derivatives in terms of speed, and power. If you know C, you'll know how to make this utility yours! This is a source-based, no-binary, fetching utility that sucks less amongst neofetch and all of its derivatives. Fastfetch is written in the suckless programming language which is C. However, it is written in non-pure C, it contains C++, and Objective-C, it also has over 800+ lines of code and that is fastfetch.c alone. Our suckless fetching utility aims to be lightweight so it can beat any thing in terms of speed and power. It has only less than 90 lines of code.
+# sfetch - Suckless Fetching Utility
 
-Requirements
--------------
-In order to build, and install sfetch, you may install any of the following compilers:
-- GCC (GNU Compiler Collection)
-- Clang (Computer Based LLVM)
-- Intel (Intel *C++* Compiler)
-- ...
+`sfetch` is a minimalistic, efficient, and "suckless" fetching utility designed to be universal and customizable. It's written in pure C and can be built on any Linux distribution, specifically Debian, Fedora, openSUSE, and Arch Linux. Gentoo next.
 
-In order to change the compiler being used on the Makefile, change it through the config.mk file.
+## Features
 
-Installation
--------------
-Edit config.mk to match your local setup (sfetch is installed into
-the /usr/local/bin namespace by default).
+- **Universal Compatibility**: `sfetch` can be built on any Linux distribution, making it highly versatile and accessible to a wide range of users.
+- **Customizable Output**: Users can tailor the output to their preferences, enhancing the user experience and allowing for greater flexibility.
+- **Source Code Distribution**: `sfetch` is distributed as source code rather than a pre-built binary, promoting transparency and flexibility.
+- **Memory Safety**: `sfetch` uses the `free()` function to deallocate memory once it's no longer needed, helping prevent memory leaks and contributing to the overall safety of the utility.
 
-Afterwards enter the following command in order to build and install sfetch, then, clean the compiled binary. (if
-necessary, as root):
+## Building from Source
 
-    make install clean
+As per the "suckless" philosophy, `sfetch` is designed to be built from source. Here's how you can do it with the use of the Makefile:
 
-
-Usage
--------------
-Use /usr/local/bin/sfetch or use the $PATH variable: 
 ```
-# Full path:
-/usr/local/bin/sfetch
-
-# $PATH variable:
-sfetch
+# make clean install
 ```
-Credits
--------------
-Based on my fetcher-cpp source code just suck less but rewritten in Pure C with a little bit of Makefile.
-README based on the suckless terminal's README.md.
+
+## Usage
+
+Using the $PATH environment variable you can run it indirectly without typing in the whole path:
+
+```
+$ sfetch
+```
+
+## Contributing
+
+You may contribute to `sfetch` by building, and making pull requests or opening an issue.
