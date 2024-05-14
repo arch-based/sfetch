@@ -24,7 +24,7 @@ char* get_package_manager() {
     if (!system("command -v apt > /dev/null")) {
         return "apt-cache pkgnames | wc -l";
     } else if (!system("command -v dpkg > /dev/null")) {
-        return "dpkg --list | wc --lines";
+        return "dpkg --list | wc -l";
     } else if (!system("command -v pacman > /dev/null")) {
         return "pacman -Qe | wc -l";
     } else if (!system("command -v zypper > /dev/null")) {
@@ -52,7 +52,6 @@ int main() {
     
     char* pkgs = execute_command(get_package_manager());
     char* memory = execute_command("free -m | awk 'NR==2{printf \"%sMiB / %sMiB (%.2f%%)\", $3,$2,$3*100/$2 }'");
-    char* message = MESSAGE;
     
     printf("%s%s%s%s%s@%s%s%s%s\n", "                    ", CYAN, BOLD, user, RESET, CYAN, BOLD, hostname, RESET);
     printf("%s%s%s%s%s\n", "          ", CYAN, BOLD, "-----------------------------", RESET);
@@ -63,7 +62,6 @@ int main() {
     print_output(" SHELL: ~~~~~~>", shell);
     print_output(" PACKAGES: ~~~>", pkgs);
     print_output("󰍛 MEMORY: ~~~~~>", memory);
-    printf("%s\n", message);
     
     free(hostname);
     free(shell);
