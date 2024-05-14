@@ -63,7 +63,7 @@ int main() {
     print_output(" SHELL: ~~~~~~>", shell);
     print_output(" PACKAGES: ~~~>", pkgs);
     print_output("󰍛 MEMORY: ~~~~~>", memory);
-    printf("\n%s\n", message);
+    printf("%s\n", message);
     
     free(hostname);
     free(shell);
