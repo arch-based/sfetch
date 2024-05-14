@@ -10,7 +10,7 @@ config.h:
 	cp config.def.h config.h
 
 sfetch: $(SRC)
-	$(CC) main.c -o sfetch
+	$(CC) $(SRC) -o sfetch
 	
 install: sfetch
 	cp $(TARGETBIN) $(DESTDIR)
