@@ -25,8 +25,14 @@ necessary as root):
 
 Usage
 -------------
-Use /usr/local/bin/sfetch or use the $PATH variable: sfetch.
+Use /usr/local/bin/sfetch or use the $PATH variable: 
+```
+# Full path:
+/usr/local/bin/sfetch
 
+# $PATH variable:
+sfetch
+```
 Credits
 -------------
 Based on my fetcher-cpp source code just suck less but rewritten in Pure C with a little bit of Makefile.
