@@ -17,10 +17,10 @@ Installation
 Edit config.mk to match your local setup (sfetch is installed into
 the /usr/local/bin namespace by default).
 
-Afterwards enter the following command to build and install sfetch (if
-necessary as root):
+Afterwards enter the following command in order to build and install sfetch, then, clean the compiled binary. (if
+necessary, as root):
 
-    make clean install
+    make install clean
 
 
 Usage
